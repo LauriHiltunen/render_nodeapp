@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 var logger = function(req, res, next) {
-    res.send ('Seeking truths beyond meaming of live, you will find 43')
+    res.send ('Seeking truths beyond meaning of live, you will find 43')
     next();
 }
 
