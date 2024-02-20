@@ -3,9 +3,12 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.get ('/', (req,res) => {
+var logger = function(req, res, next) {
     res.send ('Seeking truths beyond meaming of live, you will find 43')
-})
+    next();
+}
+
+app.use(logger);
 
 app.listen(PORT,() => {
     console.log(`Serveriä ajetaan osoitteessa http://localhost:${PORT}`)
